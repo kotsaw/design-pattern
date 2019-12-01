@@ -1,0 +1,5 @@
+@startuml exemple
+class Library {
+    + someLibraryMethod(): boolean 
+}
+@enduml
