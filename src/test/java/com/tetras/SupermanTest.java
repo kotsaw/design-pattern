@@ -9,9 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class SupermanTest {
     @Test
     void testSingleton() {
-
-        Superman monSuperman1 = new Superman();
-        Superman monSuperman2 = new Superman();
+        Superman monSuperman1 = Superman.getInstance();
+        Superman monSuperman2 = Superman.getInstance();
         assertEquals(monSuperman1, monSuperman2);
     }
 }

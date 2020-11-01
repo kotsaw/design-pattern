@@ -1,3 +1,7 @@
 @startuml Singleton
-class Superman
+
+class Superman {
+    {static} - instance: Superman
+    {static} + getInstance(): Superman
+}
 @enduml
