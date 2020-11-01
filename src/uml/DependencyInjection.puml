@@ -5,7 +5,7 @@ skinparam class {
     BackgroundColor<<application>> #0bca9d
 }
 
-package "com.tetras.librairie" #9bca0d {
+package "com.tetras.librarie" #9bca0d {
     interface MachineACafe <<librairie>> 
 
     class GestionMachineACafe <<librairie>> {
@@ -13,15 +13,14 @@ package "com.tetras.librairie" #9bca0d {
     }
 }
 
-
 package "com.tetras.application" #0bca0d {
     class MaMachineACafe <<application>> 
-    MaMachineACafe <|.. MachineACafe
-
     class Application <<application>> {
         - gestionnaire: GestionMachineACafe
     }
 }
+
+MaMachineACafe ..|> MachineACafe
 
 Application o-- GestionMachineACafe
 GestionMachineACafe o-- MachineACafe

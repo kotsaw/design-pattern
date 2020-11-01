@@ -1,0 +1,25 @@
+@startuml Singleton
+
+skinparam class {
+    BackgroundColor<<librairie>> #9bca9d
+    BackgroundColor<<application>> #0bca9d
+}
+
+package "librarie" #9bca0d {
+    interface Service <<librairie>> 
+}
+
+package "application" #0bca0d {
+    class ServiceImplementation <<application>> 
+    class Client <<application>> 
+}
+
+
+ServiceImplementation ..|> Service
+Client --> Service : Use
+
+class Injector
+Client <.. Injector : Create
+ServiceImplementation <.. Injector : Create
+
+@enduml

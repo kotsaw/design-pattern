@@ -2,18 +2,26 @@ package com.tetras.application;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import com.tetras.librairie.GestionMachineACafe;
-import com.tetras.librairie.MachineACafe;
+import javax.inject.Inject;
 
+import com.tetras.librairie.GestionMachineACafe;
+
+import org.jboss.weld.junit5.EnableWeld;
+import org.jboss.weld.junit5.WeldInitiator;
+import org.jboss.weld.junit5.WeldSetup;
 import org.junit.jupiter.api.Test;
 
+@EnableWeld
 public class ApplicationTest {
+
+    @WeldSetup
+    public WeldInitiator weld = WeldInitiator.of(Application.class, GestionMachineACafe.class, MaMachineACafe.class);
+
+    @Inject
+    Application appli;
 
     @Test
     public void testDependencyInjection() {
-        MachineACafe machine = new MaMachineACafe();
-        GestionMachineACafe gestionnaire = new GestionMachineACafe(machine);
-        Application appli = new Application(gestionnaire);
         // Test
         assertNotNull(appli);
         assertNotNull(appli.getGestionnaire());
