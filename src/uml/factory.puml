@@ -1,0 +1,15 @@
+@startuml Factory
+
+class LukeSkywlaker {
+     + mediter():void  
+     + combattre(): void
+}
+class Yoda {
+     + mediter():void  
+     + combattre(): void
+}
+class Player
+
+Player ..> LukeSkywlaker : joue avec
+
+@enduml
