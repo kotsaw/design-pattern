@@ -14,4 +14,7 @@ public class Application {
         this.gestionnaire = gestionnaire;
     }
 
+    public Application(GestionMachineACafe gestionnaire) {
+        this.gestionnaire = gestionnaire;
+    }
 }

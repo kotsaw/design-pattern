@@ -1,7 +1,5 @@
 package com.tetras.librairie;
 
-import com.tetras.application.MachineACafe;
-
 public class GestionMachineACafe {
 
     private MachineACafe machine;
@@ -11,6 +9,10 @@ public class GestionMachineACafe {
     }
 
     public void setMachine(MachineACafe machine) {
+        this.machine = machine;
+    }
+
+    public GestionMachineACafe(MachineACafe machine) {
         this.machine = machine;
     }
 }
