@@ -6,19 +6,24 @@ import org.junit.jupiter.api.Test;
 
 public class FactoryTest {
 
-    @Test
-    public void testYoda() {
-        Yoda executor = new Yoda();
-        assertTrue(executor instanceof Yoda);
+    private void assertExecutor(MaitreJedi executor) {
+
         executor.mediter();
         executor.combattre();
     }
 
     @Test
-    public void testLukeSkywalker() {
-        LukeSkywalker executor = new LukeSkywalker();
-        assertTrue(executor instanceof LukeSkywalker);
-        executor.mediter();
-        executor.combattre();
+    public void testOracle() {
+        MaitreJedi executor = MaitreJediFactory.getMaitreJedi(MaitreType.yoda);
+        assertTrue(executor instanceof Yoda);
+        assertExecutor(executor);
     }
+
+    @Test
+    public void testMariaDb() {
+        MaitreJedi executor = MaitreJediFactory.getMaitreJedi(MaitreType.lukeSkywalker);
+        assertTrue(executor instanceof LukeSkywalker);
+        assertExecutor(executor);
+    }
+
 }
