@@ -1,11 +1,14 @@
 package com.tetras.material;
 
-import com.tetras.generic.Label;
+public class MaterialLabel {
 
-public class MaterialLabel extends Label {
+    private String name = "MaterialLabel";
 
     public MaterialLabel() {
-        super("MaterialLabel");
+        System.out.println(name + " created");
     }
 
+    public String show() {
+        return name + " shown";
+    }
 }

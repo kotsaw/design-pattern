@@ -1,11 +1,14 @@
 package com.tetras.material;
 
-import com.tetras.generic.Button;
+public class MaterialButton {
 
-public class MaterialButton extends Button {
+    private String name = "MaterialButton";
 
     public MaterialButton() {
-        super("MaterialButton");
+        System.out.println(name + " created");
     }
 
+    public String click() {
+        return name + " clicked";
+    }
 }

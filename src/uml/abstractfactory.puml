@@ -2,50 +2,45 @@
 
 skinparam class {
     BackgroundColor<<holo>> #9bca9d
+    BackgroundColor<<factoryholo>> #70baf4
     BackgroundColor<<material>> #0bca9d
-	BackgroundColor<<holofactory>> #70baf4
-	BackgroundColor<<materialfactory>> #00baf4
+	BackgroundColor<<factorymaterial>> #00baf4
 }
-abstract class Component {
-    - name: String
-    + Component(name: String)
-    + getName(): String
-}
-abstract class Button {
+
+class HoloButton <<holo>> {
     + click(): String
 }
-Component <|-- Button
-abstract class Label {
+class HoloLabel <<holo>> {
     + show():String
 }
-Component <|-- Label
-abstract class DatePicker {
+class HoloDatePicker <<holo>> {
     + select():String
 }
-Component <|-- DatePicker
-abstract class AbstractFactory {
-    + createButton(): Button
-    + createDatePicker(): DatePicker
-    + createLabel(): Label
+
+class HoloFactory <<factoryholo>>{
+    + createButton(): HoloButton
+    + createDatePicker(): HoloDatePicker
+    + createLabel(): HoloLabel
 }
 
-class HoloButton <<holo>>
-Button <|-- HoloButton
-class HoloLabel <<holo>>
-Label <|-- HoloLabel
-class HoloDatePicker <<holo>>
-DatePicker <|-- HoloDatePicker
+class MaterialButton <<material>> {
+    + click(): String
+}
+class MaterialLabel <<material>> {
+    + show():String
+}
+class MaterialDatePicker <<material>> {
+    + select():String
+}
 
-class HoloFactory <<holofactory>>
-AbstractFactory <|-- HoloFactory
+class MaterialFactory <<factorymaterial>>{
+    + createButton(): MaterialButton
+    + createDatePicker(): MaterialDatePicker
+    + createLabel(): MaterialLabel
+}
 
-class MaterialButton <<material>>
-Button <|-- MaterialButton
-class MaterialLabel <<material>>
-Label <|-- MaterialLabel
-class MaterialDatePicker <<material>>
-DatePicker <|-- MaterialDatePicker
-
-class MaterialFactory <<materialfactory>>
-AbstractFactory <|-- MaterialFactory
+HoloButton -up[hidden]- MaterialButton
+HoloLabel -up[hidden]- MaterialLabel
+HoloDatePicker -up[hidden]- MaterialDatePicker
+HoloFactory -up[hidden]- MaterialFactory
 @enduml

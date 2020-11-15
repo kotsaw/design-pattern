@@ -1,11 +1,14 @@
 package com.tetras.holo;
 
-import com.tetras.generic.Label;
+public class HoloLabel {
 
-public class HoloLabel extends Label {
+    private String name = "HoloLabel";
 
     public HoloLabel() {
-        super("HoloLabel");
+        System.out.println(name + " created");
     }
 
+    public String show() {
+        return name + " shown";
+    }
 }

@@ -1,11 +1,14 @@
 package com.tetras.holo;
 
-import com.tetras.generic.DatePicker;
+public class HoloDatePicker {
 
-public class HoloDatePicker extends DatePicker {
+    private String name = "HoloDatePicker";
 
     public HoloDatePicker() {
-        super("HoloDatePicker");
+        System.out.println(name + " created");
     }
 
+    public String select() {
+        return name + " selected";
+    }
 }

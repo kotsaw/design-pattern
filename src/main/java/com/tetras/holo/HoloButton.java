@@ -1,11 +1,14 @@
 package com.tetras.holo;
 
-import com.tetras.generic.Button;
+public class HoloButton {
 
-public class HoloButton extends Button {
+    private String name = "HoloButton";
 
     public HoloButton() {
-        super("HoloButton");
+        System.out.println(name + " created");
     }
 
+    public String click() {
+        return name + " clicked";
+    }
 }

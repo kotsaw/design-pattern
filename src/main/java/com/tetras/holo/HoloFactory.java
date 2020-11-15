@@ -1,23 +1,16 @@
 package com.tetras.holo;
 
-import com.tetras.generic.AbstractFactory;
-import com.tetras.generic.Button;
-import com.tetras.generic.DatePicker;
-import com.tetras.generic.Label;
+public class HoloFactory {
 
-public class HoloFactory extends AbstractFactory {
-    @Override
-    public DatePicker createDatePicker() {
+    public HoloDatePicker createHoloDatePicker() {
         return new HoloDatePicker();
     }
 
-    @Override
-    public Label createLabel() {
+    public HoloLabel createHoloLabel() {
         return new HoloLabel();
     }
 
-    @Override
-    public Button createButton() {
+    public HoloButton createHoloButton() {
         return new HoloButton();
     }
 }
