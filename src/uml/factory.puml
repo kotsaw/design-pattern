@@ -11,5 +11,6 @@ class Yoda {
 class Player
 
 Player ..> LukeSkywlaker : joue avec
+Player ..> Yoda : joue avec
 
 @enduml
