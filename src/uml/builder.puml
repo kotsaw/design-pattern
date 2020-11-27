@@ -8,6 +8,26 @@ class Pizza {
     - anchois: boolean 
     - champignons: boolean 
     - jambon: boolean 
+    # Pizza()
+}
+
+class PizzaBuilder {
+    - emmental: boolean
+    - cremeFraiche: boolean
+    - lardons: boolean 
+    - sauceTomate: boolean 
+    - anchois: boolean 
+    - champignons: boolean 
+    - jambon: boolean 
+
+    + addJambon() : void
+    + addChampignons() : void
+    + addAnchois() : void
+    + addSauceTomate() : void
+    + addLardons() : void
+    + addCremeFraiche() : void
+    + addEmmental : void
+    + build() : Pizza
 }
 
 @enduml

@@ -2,6 +2,10 @@ package com.tetras;
 
 public class Pizza {
 
+    protected Pizza() {
+
+    }
+
     private boolean emmental = false;
 
     private boolean cremeFraiche = false;

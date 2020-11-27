@@ -10,8 +10,14 @@ class PizzaTest {
     @Test
     void testCreatePizza() {
         // Reine : champignons, emmental, sauce tomate
-        Pizza maPizza = new Pizza();
+        PizzaBuilder monPizzaiolo = new PizzaBuilder();
+        monPizzaiolo.addChampignons();
+        monPizzaiolo.addEmmental();
+        monPizzaiolo.addJambon();
+        monPizzaiolo.addSauceTomate();
 
+        Pizza maPizza = monPizzaiolo.build();
+        // Test
         assertFalse(maPizza.isAnchois());
         assertTrue(maPizza.isChampignons());
         assertFalse(maPizza.isCremeFraiche());
