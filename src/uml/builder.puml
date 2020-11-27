@@ -1,0 +1,13 @@
+@startuml builder
+
+class Pizza {
+    - emmental: boolean
+    - cremeFraiche: boolean
+    - lardons: boolean 
+    - sauceTomate: boolean 
+    - anchois: boolean 
+    - champignons: boolean 
+    - jambon: boolean 
+}
+
+@enduml
