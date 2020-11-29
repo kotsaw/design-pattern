@@ -32,7 +32,7 @@ code .
 ## Utilisation
 Dans un bash tapez
 ```bash
-gradle build
+./gradlew build
 ```
 
 
