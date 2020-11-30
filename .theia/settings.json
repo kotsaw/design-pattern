@@ -1,0 +1,11 @@
+{
+    "java.configuration.checkProjectSettingsExclusions": false,
+	"java.configuration.updateBuildConfiguration": "automatic",
+  	"plantuml.server": "https://www.plantuml.com/plantuml",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
+}

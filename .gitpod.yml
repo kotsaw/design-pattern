@@ -1,2 +1,8 @@
 tasks:
   - init: ./gradlew build
+
+vscode:
+  extensions:
+    - richardwillis.vscode-gradle@3.5.2:0iC/chWp6z6ecqNv1BAYyQ==
+    - jebbs.plantuml@2.13.12:q7DiD6H5NTesaWYIXmeMMQ==
+    - vscjava.vscode-java-test@0.26.0:/WPaVTekvuHTzqrg+mv0GQ==
