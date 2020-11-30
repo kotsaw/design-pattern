@@ -13,5 +13,11 @@ git clone https://github.com/jandry/design-pattern.git
 # Récupérer mise à jours
 git fetch origin
 
-# Mise ne page PlantUml
+# Mise en page PlantUml
 https://crashedmind.github.io/PlantUMLHitchhikersGuide/layout/layout.html
+
+# Diagrammes de classe en PlantUml
+https://plantuml.com/fr/class-diagram
+
+# Diagrammes de sequence en PlantUml
+https://plantuml.com/fr/sequence-diagram
