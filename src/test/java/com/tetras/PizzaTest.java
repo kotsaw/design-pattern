@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PizzaTest {
     @Test
     void testCreatePizza() {
-        // Reine : champignons, emmental, sauce tomate
+        // Reine : champignons, emmental, sauce tomate, jambon
         Pizza maPizza = new Pizza();
 
         assertFalse(maPizza.isAnchois());
