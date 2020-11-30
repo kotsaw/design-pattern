@@ -1,4 +1,4 @@
-Mon example PantUML dans du MarkDown
+Mon example PlantUML dans du MarkDown
 ```plantuml
 @startuml exemple
 class Library {
