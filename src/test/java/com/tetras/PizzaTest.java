@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PizzaTest {
     @Test
     void testCreatePizza() {
-        // Reine : champignons, emmental, sauce tomate
+        // Reine : champignons, emmental, sauce tomate, jambon
         PizzaBuilder monPizzaiolo = new PizzaBuilder();
         monPizzaiolo.addChampignons();
         monPizzaiolo.addEmmental();
