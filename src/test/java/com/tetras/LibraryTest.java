@@ -8,8 +8,38 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
     @Test
-    void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+    void testSafetyCar() {
+        SafetyCar voituresafety1 =SafetyCar.getInstance();
+        SafetyCar voituresafety2 =SafetyCar.getInstance();
+        assertEquals(voituresafety1,voituresafety2);
+    }
+    @Test
+    void testRenault() {
+        VoitureDuChampionnatDeFormuleUn Renault1 = CarFactory.getTypeCar(ConstructeurAutomobile.Renault);
+        CarRenault RenColor = new CarRenault();
+        String color = RenColor.getColor();
+
+        assertEquals(color,"Bleu");
+        assertTrue(Renault1 instanceof CarRenault);
+    }
+
+    @Test
+    void testMercedes() {
+        VoitureDuChampionnatDeFormuleUn Mercedes1 = CarFactory.getTypeCar(ConstructeurAutomobile.Mercedes);
+        CarRenault MerColor = new CarRenault();
+        String color = MerColor.getColor();
+
+        assertEquals(color,"Noir");
+        assertTrue(Mercedes1 instanceof CarMercedes);
+    }
+
+    @Test
+    void testferrari() {
+        VoitureDuChampionnatDeFormuleUn Ferrari1 = CarFactory.getTypeCar(ConstructeurAutomobile.Ferrari);
+        CarRenault MerColor = new CarRenault();
+        String color = MerColor.getColor();
+
+        assertEquals(color,"Rouge");
+        assertTrue(Ferrari1 instanceof CarFerrari);
     }
 }
