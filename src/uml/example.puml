@@ -1,5 +1,39 @@
 @startuml exemple
-class Library {
-    + someLibraryMethod(): boolean 
+
+
+interface VoitureDuChampionnatDeFormuleUn{
+    + accelerer(): boolean
+    + tourner(): boolean
+    + freiner() : boolean
 }
+class SafetyCar{
+    - instance :SafetyCar 
+    + getSafetycar():SafetyCar
+}
+class CarFactory{
+    + getTypeCar(ConstructeurAutomobile type) : VoitureDuChampionnatDeFormuleUn 
+}
+
+class CarMercedes{
+    + getColor():String
+}
+class CarFerrari{
+    + getColor():String
+}
+class CarRenault{
+    + getColor():String
+}
+
+Class Course
+
+enum ConstructeurAutomobile
+
+CarFerrari ..|> VoitureDuChampionnatDeFormuleUn
+CarMercedes ..|> VoitureDuChampionnatDeFormuleUn
+CarRenault ..|> VoitureDuChampionnatDeFormuleUn
+Couse ..|>CarFerrari 
+Couse ..|>CarMercedes 
+Couse ..|>CarRenault
+Couse ..|>SafetyCar 
+
 @enduml
