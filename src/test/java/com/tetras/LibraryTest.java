@@ -26,7 +26,7 @@ class LibraryTest {
     @Test
     void testMercedes() {
         VoitureDuChampionnatDeFormuleUn Mercedes1 = CarFactory.getTypeCar(ConstructeurAutomobile.Mercedes);
-        CarRenault MerColor = new CarRenault();
+        CarRenault MerColor = new CarMercedes();
         String color = MerColor.getColor();
 
         assertEquals(color,"Noir");
@@ -36,7 +36,7 @@ class LibraryTest {
     @Test
     void testferrari() {
         VoitureDuChampionnatDeFormuleUn Ferrari1 = CarFactory.getTypeCar(ConstructeurAutomobile.Ferrari);
-        CarRenault MerColor = new CarRenault();
+        CarRenault MerColor = new CarFerrari();
         String color = MerColor.getColor();
 
         assertEquals(color,"Rouge");
