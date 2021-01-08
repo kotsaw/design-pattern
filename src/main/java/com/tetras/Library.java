@@ -6,5 +6,6 @@ package com.tetras;
 public class Library {
     public boolean someLibraryMethod() {
         return true;
+        //test
     }
 }
