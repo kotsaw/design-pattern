@@ -1,39 +1,47 @@
 @startuml exemple
 
+interface ComposantRequeteHttp {
+     + afficher() : String   
+}
+class RequeteHttp{
+    - children : ComposantRequeteHttp
+    + add(ComposantRequeteHttp)
+    + remove(ComposantRequeteHttp)
+    + getComposant(int) : ComposantRequeteHttp
+    + afficher() : String
+}
+class Url{
+    - path : String
+    + afficher() : String
+}
+class Header{
+    - header : HashMap
+    + convertWithIteration
+    + afficher() : String
+}
+class Body{
+    - content : String
+    + afficher() : String
+}
 
-interface VoitureDuChampionnatDeFormuleUn{
-    + accelerer(): boolean
-    + tourner(): boolean
-    + freiner() : boolean
-}
-class SafetyCar{
-    - instance :SafetyCar 
-    + getSafetycar():SafetyCar
-}
-class CarFactory{
-    + getTypeCar(ConstructeurAutomobile type) : VoitureDuChampionnatDeFormuleUn 
+RequeteHttp "1" *-- "many" ComposantRequeteHttp
+ComposantRequeteHttp <|-- RequeteHttp : contains
+ComposantRequeteHttp <|-- Url
+ComposantRequeteHttp <|-- Header
+ComposantRequeteHttp <|-- Body
+
+interface IServeurWeb {
+     + repondre() :void   
 }
 
-class CarMercedes{
-    + getColor():String
-}
-class CarFerrari{
-    + getColor():String
-}
-class CarRenault{
-    + getColor():String
+class ServeurWeb
+class ServeurWebProxy{
+    - sw : ServeurWeb
 }
 
-Class Course
+ServeurWebProxy ..> IServeurWeb
+ServeurWeb ..> IServeurWeb
+ServeurWeb <|-- ServeurWebProxy
 
-enum ConstructeurAutomobile
-
-CarFerrari ..|> VoitureDuChampionnatDeFormuleUn
-CarMercedes ..|> VoitureDuChampionnatDeFormuleUn
-CarRenault ..|> VoitureDuChampionnatDeFormuleUn
-Couse ..|>CarFerrari 
-Couse ..|>CarMercedes 
-Couse ..|>CarRenault
-Couse ..|>SafetyCar 
 
 @enduml
